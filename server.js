@@ -18,7 +18,7 @@ app.set('view engine', 'ejs')
 
 var db
 
-MongoClient.connect('mongodb://user:password@ds239968.mlab.com:39968/share', (err, client) => {
+MongoClient.connect('mongodb://name:password@ds239968.mlab.com:39968/share', (err, client) => {
     if (err) return console.log(err)
     db = client.db('share')
     app.listen(3000, function () {
@@ -33,7 +33,7 @@ app.post('/quotes', (req, res) => {
         res.redirect('/')
 
 })
-
+})
 
 app.get('/',(req, res) => {
     db.collection('quotes').find().toArray((err, result) => {
