@@ -34,12 +34,6 @@ app.post('/quotes', (req, res) => {
 
 })
 
-function(a,b){
-
-}
-(a,b) => {}
-
-})
 
 app.get('/',(req, res) => {
     db.collection('quotes').find().toArray((err, result) => {
