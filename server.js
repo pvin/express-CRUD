@@ -48,10 +48,9 @@ res.redirect('/')
 
 app.put('/quotes', (req, res) => {
     db.collection('quotes').
-    findOneAndUpdate({name: 'test3'}, {
+    findOneAndUpdate({name: 'test22222245'}, {
         $set: {
-            name: req.body.name,
-            quote: req.body.quote
+            name: req.body.name
         }
     } ,{
               sort: {_id:-1},
